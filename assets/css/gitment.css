@@ -225,7 +225,7 @@ a.gitment-comment-name:visited {
   background-color: #fff;
   border-color: #CFD8DC;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .gitment-editor-tab {
         display: none;
     }
