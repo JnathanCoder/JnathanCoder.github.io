@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://JnathanCoder.github.io">
-  <title>Archives: 2019/5 | Jnathan Blog</title>
+  <title>CSS文本超出容器宽度使用省略号代替（不考虑js方法） | Jnathan Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jnathan Blog">
-<meta property="og:url" content="https://JnathanCoder.github.io/archives/2019/05/index.html">
+  <meta name="description" content="方法一 ：常规方法（适用于webkit内核浏览器）12&amp;lt;div class=&quot;container text-ellipsis&quot;&amp;gt;单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号&amp;lt;/div&amp;gt;&amp;lt;div class=&quot;container text-ellipsis-multi&quot;&amp;">
+<meta name="keywords" content="ellipsis,换行,省略号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS文本超出容器宽度使用省略号代替（不考虑js方法）">
+<meta property="og:url" content="https://JnathanCoder.github.io/2019/04/01/text-overflow-ellipsis/index.html">
 <meta property="og:site_name" content="Jnathan Blog">
+<meta property="og:description" content="方法一 ：常规方法（适用于webkit内核浏览器）12&amp;lt;div class=&quot;container text-ellipsis&quot;&amp;gt;单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号&amp;lt;/div&amp;gt;&amp;lt;div class=&quot;container text-ellipsis-multi&quot;&amp;">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://jnathancoder.github.io/assets/img/webkit-single.jpg">
+<meta property="og:image" content="https://jnathancoder.github.io/assets/img/webkit-multi.jpg">
+<meta property="og:image" content="https://jnathancoder.github.io/assets/img/unwebkit-multi.jpg">
+<meta property="og:updated_time" content="2019-05-20T08:35:29.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jnathan Blog">
+<meta name="twitter:title" content="CSS文本超出容器宽度使用省略号代替（不考虑js方法）">
+<meta name="twitter:description" content="方法一 ：常规方法（适用于webkit内核浏览器）12&amp;lt;div class=&quot;container text-ellipsis&quot;&amp;gt;单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号&amp;lt;/div&amp;gt;&amp;lt;div class=&quot;container text-ellipsis-multi&quot;&amp;">
+<meta name="twitter:image" content="https://jnathancoder.github.io/assets/img/webkit-single.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jnathan Blog" type="application/atom+xml">
   
@@ -49,7 +58,7 @@
 		  <h1 class="header-author"><a href="/">Jnathan</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">生人哈卖皮 熟人笑嘻嘻</p>
+		<p class="header-subtitle">生人蛤蟆皮 熟人笑嘻嘻</p>
 		
 
 		<nav class="header-menu">
@@ -103,7 +112,7 @@
 			  <h1 class="header-author js-header-author">Jnathan</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>生人哈卖皮 熟人笑嘻嘻<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>生人蛤蟆皮 熟人笑嘻嘻<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -140,36 +149,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-text-overflow-ellipsis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/text-overflow-ellipsis/" class="archive-article-date">
-  	<time datetime="2019-05-19T09:56:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/text-overflow-ellipsis/">text-overflow-ellipsis</a>
+    <h1 class="article-title" itemprop="name">
+      CSS文本超出容器宽度使用省略号代替（不考虑js方法）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/01/text-overflow-ellipsis/" class="archive-article-date">
+  	<time datetime="2019-03-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="方法一-：常规方法（适用于webkit内核浏览器）"><a href="#方法一-：常规方法（适用于webkit内核浏览器）" class="headerlink" title="方法一 ：常规方法（适用于webkit内核浏览器）"></a>方法一 ：常规方法（适用于<code>webkit</code>内核浏览器）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container text-ellipsis"</span>&gt;</span>单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号单行文字超出省略号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container text-ellipsis-multi"</span>&gt;</span>多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .container &#123;</span></span><br><span class="line"><span class="undefined">        display: inline-block;</span></span><br><span class="line"><span class="undefined">        width: 333px;</span></span><br><span class="line"><span class="undefined">        height: 60px;</span></span><br><span class="line"><span class="undefined">        font-size: 16px;</span></span><br><span class="line"><span class="undefined">        border: 1px solid #00bebe;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .text-ellipsis &#123;</span></span><br><span class="line"><span class="undefined">        overflow: hidden;</span></span><br><span class="line"><span class="undefined">        text-overflow: ellipsis;</span></span><br><span class="line"><span class="undefined">        white-space: nowrap;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .text-ellipsis-multi &#123;</span></span><br><span class="line"><span class="undefined">        line-height: 20px;</span></span><br><span class="line"><span class="undefined">        overflow: hidden;</span></span><br><span class="line"><span class="undefined">        text-overflow: ellipsis;</span></span><br><span class="line"><span class="undefined">        display: -webkit-box;</span></span><br><span class="line"><span class="undefined">        -webkit-line-clamp: 3;  // 控制显示的行数</span></span><br><span class="line"><span class="undefined">        -webkit-box-orient: vertical</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在<code>webkit</code>浏览器中的表现：<img src="/assets/img/webkit-single.jpg" alt="单行省略"> <img src="/assets/img/webkit-multi.jpg" alt="多行省略"></p>
+<h3 id="方法二：利用伪类-float（适用于大部分浏览器）"><a href="#方法二：利用伪类-float（适用于大部分浏览器）" class="headerlink" title="方法二：利用伪类+float（适用于大部分浏览器）"></a>方法二：利用伪类+float（适用于大部分浏览器）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"text"</span>&gt;</span>多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号多行文字超出省略号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .wrap &#123;</span></span><br><span class="line"><span class="undefined">        width: 333px;</span></span><br><span class="line"><span class="undefined">        height: 60px;</span></span><br><span class="line"><span class="undefined">        line-height: 20px;</span></span><br><span class="line"><span class="undefined">        overflow: hidden;</span></span><br><span class="line"><span class="undefined">        border: 1px solid #00bebe;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .wrap:before &#123;</span></span><br><span class="line"><span class="undefined">        float: left;</span></span><br><span class="line"><span class="undefined">        content: '';</span></span><br><span class="line"><span class="undefined">        width: 5px;</span></span><br><span class="line"><span class="undefined">        height: 100%;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .wrap:after &#123;</span></span><br><span class="line"><span class="undefined">        float: right;</span></span><br><span class="line"><span class="undefined">        content: '...';</span></span><br><span class="line"><span class="undefined">        width: 20px;</span></span><br><span class="line"><span class="undefined">        margin-left: -20px;</span></span><br><span class="line"><span class="undefined">        height: 20px;</span></span><br><span class="line"><span class="undefined">        line-height: 20px;</span></span><br><span class="line"><span class="undefined">        margin-right: 5px;</span></span><br><span class="line"><span class="undefined">        background: #fff;</span></span><br><span class="line"><span class="undefined">        position: relative;</span></span><br><span class="line"><span class="undefined">        top: -20px;</span></span><br><span class="line"><span class="undefined">        left: 100%;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .wrap .text &#123;</span></span><br><span class="line"><span class="undefined">        float: right;</span></span><br><span class="line"><span class="undefined">        width: 100%;</span></span><br><span class="line"><span class="undefined">        margin-left: -5px;</span></span><br><span class="line"><span class="undefined">        word-break: break-all;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在<code>非webkit</code>内核浏览器中的表现：<img src="/assets/img/unwebkit-multi.jpg" alt="非webkit浏览器多行省略"></p>
+<p>可以看到效果还是不那么尽人意，可以在此基础上再根据实际情况修改相应代码，比如<code>...</code>用渐变色代替现在的白色，会显得平滑。另外，也可以搭配js进一步处理，可以参考<a href="https://blog.csdn.net/lhban108/article/details/82757564" target="_blank" rel="noopener">这里</a>。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -189,19 +235,45 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -214,7 +286,7 @@
     		&copy; 2019 Jnathan
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<!-- Powered By <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> -->
       	</div>
     </div>
   </div>
@@ -224,8 +296,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

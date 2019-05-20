@@ -1,0 +1,7 @@
+.article-entry h3, .article-entry h4 {
+    background: unset;
+}
+.article-more-a {
+    display: block;
+    margin-top: 30px;
+}
