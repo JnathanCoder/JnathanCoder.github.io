@@ -225,6 +225,14 @@ a.gitment-comment-name:visited {
   background-color: #fff;
   border-color: #CFD8DC;
 }
+@media (max-width: 400px) {
+    .gitment-editor-tab {
+        display: none;
+    }
+    .gitment-editor-tab.gitment-selected {
+        display: block;
+    }
+}
 
 .gitment-editor-login {
   float: right;
