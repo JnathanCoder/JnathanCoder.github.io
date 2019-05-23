@@ -142,6 +142,199 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-multiple-diary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/multiple-diary/">日志，内容会持续补充...</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/multiple-diary/" class="archive-article-date">
+  	<time datetime="2019-05-22T09:43:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-setTimeout中方法体添加引号与不添加引号的区别"><a href="#1-setTimeout中方法体添加引号与不添加引号的区别" class="headerlink" title="1. setTimeout中方法体添加引号与不添加引号的区别"></a>1. setTimeout中方法体添加引号与不添加引号的区别</h3><blockquote>
+<p><code>添加引号</code>的情况，调用的函数是<code>全局范围</code>的。<code>未添加引号</code>的情况，调用的是<code>局部范围</code>的。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/05/22/multiple-diary/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">dairy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-forEach-interrupt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/forEach-interrupt/">forEach遍历中断</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/forEach-interrupt/" class="archive-article-date">
+  	<time datetime="2019-05-22T09:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    [<span class="number">22</span>, <span class="number">34</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">98</span>].forEach( <span class="function">(<span class="params">value, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (value === <span class="number">20</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'遇到20能够退出循环吗？'</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">'自定义异常提示语'</span>)</span><br><span class="line">            <span class="keyword">return</span>  <span class="comment">// return并不能中断循环，这里可写可不写</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="built_in">console</span>.log(<span class="string">'当前遍历值：'</span>, value)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125; <span class="keyword">catch</span>(err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.message)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 22</span></span><br><span class="line"><span class="comment">// 34</span></span><br><span class="line"><span class="comment">// 遇到20能够退出循环吗？</span></span><br><span class="line"><span class="comment">// 自定义异常提示语</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-void-0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/void-0/">使用 void 0 代替 undefined</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/void-0/" class="archive-article-date">
+  	<time datetime="2019-05-22T09:02:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="What…"><a href="#What…" class="headerlink" title="What…"></a>What…</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="number">0</span> === <span class="literal">undefined</span>  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/05/22/void-0/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-this" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -162,8 +355,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>待续。。。</p>
-
+        <h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><blockquote>
+<p><code>this</code>的指向总结起来就是<code>this永远指向最后调用它的那个对象</code></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/05/21/this/#more">More >></a>
+        
       
 
       
@@ -486,6 +683,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">超链接</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">dairy</a>
               </li>
             
             <div class="clearfix"></div>
