@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://JnathanCoder.github.io">
-  <title>日志，内容会持续补充... | Jnathan Blog</title>
+  <title>【一】日志，内容会持续补充... | Jnathan Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. setTimeout中方法体添加引号与不添加引号的区别 添加引号的情况，调用的函数是全局范围的。未添加引号的情况，调用的是局部范围的。">
 <meta name="keywords" content="dairy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日志，内容会持续补充...">
+<meta property="og:title" content="【一】日志，内容会持续补充...">
 <meta property="og:url" content="https://JnathanCoder.github.io/2019/05/22/multiple-diary/index.html">
 <meta property="og:site_name" content="Jnathan Blog">
 <meta property="og:description" content="1. setTimeout中方法体添加引号与不添加引号的区别 添加引号的情况，调用的函数是全局范围的。未添加引号的情况，调用的是局部范围的。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T07:21:16.367Z">
+<meta property="og:updated_time" content="2019-05-26T06:13:35.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日志，内容会持续补充...">
+<meta name="twitter:title" content="【一】日志，内容会持续补充...">
 <meta name="twitter:description" content="1. setTimeout中方法体添加引号与不添加引号的区别 添加引号的情况，调用的函数是全局范围的。未添加引号的情况，调用的是局部范围的。">
   
     <link rel="alternative" href="/atom.xml" title="Jnathan Blog" type="application/atom+xml">
@@ -152,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      日志，内容会持续补充...
+      【一】日志，内容会持续补充...
     </h1>
   
 
@@ -270,13 +270,40 @@
 <li>如果字符串的第一个字符不能转换成对应的数字，将返回NaN</li>
 <li>如果在解析过程中遇到了正负号（+ 或 -）、数字 (0-9)、小数点，或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符</li>
 </ul>
-<h3 id="7-原生ajax"><a href="#7-原生ajax" class="headerlink" title="7. 原生ajax"></a>7. 原生ajax</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//  请求方式  请求路径  是否异步发送请求</span></span><br><span class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'http://www.jnathan.cn/jnathan/effect/authKit.js'</span>, <span class="literal">true</span>)</span><br><span class="line">xhr.send(<span class="string">'hello world'</span>) </span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="comment">// alert(xhr.responseText)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8-有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。"><a href="#8-有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。" class="headerlink" title="8. 有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。"></a>8. 有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。</h3><blockquote>
+<h3 id="7-charAt-、charCodeAt-和-fromCharCode"><a href="#7-charAt-、charCodeAt-和-fromCharCode" class="headerlink" title="7. charAt()、charCodeAt() 和 fromCharCode()"></a>7. charAt()、charCodeAt() 和 fromCharCode()</h3><ul>
+<li><p>charAt()</p>
+<ul>
+<li>String.charAt(index)</li>
+<li>返回字符串中指定位置的字符, 索引值 index &lt; 0 或超出了范围则返回一个空字符串</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abc'</span>.charAt(<span class="number">1</span>)  <span class="comment">// 'b'</span></span><br><span class="line"><span class="string">'abc'</span>.charAt(<span class="number">-2</span>)  <span class="comment">// ''</span></span><br><span class="line"><span class="string">'abc'</span>.charAt(<span class="number">5</span>)  <span class="comment">// ''</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>charCodeAt()</p>
+<ul>
+<li>String.charCodeAt(index)</li>
+<li>返回字符串中指定位置的字符的 unicode 数值 [0, 1114111]</li>
+<li>开头的 128 个 unicode 编码单元和 ASCII 字符编码一样</li>
+<li>索引值 index &lt; 0 或超出了范围则返回一个 NaN, 大于 255 的是中文</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'AabcdD'</span>.charCodeAt(<span class="number">0</span>)  <span class="comment">// 65</span></span><br><span class="line"><span class="string">'AabcdD'</span>.charCodeAt(<span class="number">1</span>)  <span class="comment">// 97</span></span><br><span class="line"><span class="string">'AabcdD'</span>.charCodeAt(<span class="number">-1</span>)  <span class="comment">// NaN</span></span><br><span class="line"><span class="string">'AabcdD'</span>.charCodeAt(<span class="number">8</span>)  <span class="comment">// NaN</span></span><br><span class="line"><span class="string">'中国'</span>.charCodeAt(<span class="number">1</span>)  <span class="comment">// 22269</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>fromCharCode()</p>
+<ul>
+<li>String.fromCharCode(num1, num2, num3, …)</li>
+<li>根据指定的 unicode 编码中的序号值来返回字符串</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">65</span>, <span class="number">66</span>, <span class="number">97</span>)  <span class="comment">// 'ABa'</span></span><br></pre></td></tr></table></figure>
+<h3 id="8-原生ajax"><a href="#8-原生ajax" class="headerlink" title="8. 原生ajax"></a>8. 原生ajax</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//  请求方式  请求路径  是否异步发送请求</span></span><br><span class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'http://www.jnathan.cn/jnathan/effect/authKit.js'</span>, <span class="literal">true</span>)</span><br><span class="line">xhr.send(<span class="string">'hello world'</span>) </span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="comment">// alert(xhr.responseText)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。"><a href="#9-有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。" class="headerlink" title="9. 有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。"></a>9. 有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。</h3><blockquote>
 <p>时间复杂度为O(n) 空间复杂度O(1)<br>利用了<code>n ^ n = 0</code>, <code>n ^ 0 = n</code>两个等式的原理。<br>循环对数组数字进行异或计算，即  <code>0 ^ arr[0] ^ arr[1] ^ ... ^ arr[n - 1]</code> ，异或计算满足交换律原则，如果数组元素出现了相同的情况，可以移动到一起先进行计算，如果出现了<code>偶数次</code>，其结果为  <code>0</code>，出现了奇数次的数其结果为该数字，所以表达式最后得出来的结果即为数组所有<code>出现了奇数次元素</code>的<code>异或操作</code>的结果。比如：[1,2,2,3,4,4]进行异或操作得到的结果是 <code>1 ^ 3 = 2</code> ，特殊情况下（只有一个数字出现了<code>奇数次</code>），那么最后的结果就是出现了<code>奇数次</code>的那个数字！！</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn7</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oddTimesNumber = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">        oddTimesNumber = oddTimesNumber ^ arr[i]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> oddTimesNumber</span><br><span class="line">&#125;</span><br><span class="line">fn7([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>])  <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-<h3 id="9-递归求1-10的和"><a href="#9-递归求1-10的和" class="headerlink" title="9. 递归求1-10的和"></a>9. 递归求1-10的和</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nextArr, curSum = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> sum = nextArr[<span class="number">0</span>] + curSum</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (nextArr.length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> sum</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nextArr.slice(<span class="number">1</span>), sum)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">getSum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
-<h3 id="10-去除数组重复元素"><a href="#10-去除数组重复元素" class="headerlink" title="10. 去除数组重复元素"></a>10. 去除数组重复元素</h3><ul>
+<h3 id="10-递归求1-10的和"><a href="#10-递归求1-10的和" class="headerlink" title="10. 递归求1-10的和"></a>10. 递归求1-10的和</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nextArr, curSum = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> sum = nextArr[<span class="number">0</span>] + curSum</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (nextArr.length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> sum</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nextArr.slice(<span class="number">1</span>), sum)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">getSum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="11-去除数组重复元素"><a href="#11-去除数组重复元素" class="headerlink" title="11. 去除数组重复元素"></a>11. 去除数组重复元素</h3><ul>
 <li>直接双层循环比较</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> result = []</span><br><span class="line">    <span class="keyword">var</span> isRepeat</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">        isRepeat = <span class="literal">false</span>  <span class="comment">// 默认不重复，进行push操作，当判断重复时不操作</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; result.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] === result[j]) &#123;</span><br><span class="line">                isRepeat = <span class="literal">true</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!isRepeat) &#123;</span><br><span class="line">            result.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">unique([<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
@@ -296,17 +323,17 @@
 <li><code>es6</code>的<code>filter()</code>方法</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.filter( <span class="function">(<span class="params">value, index</span>) =&gt;</span> &#123; </span><br><span class="line">        arr.indexOf(value) === index</span><br><span class="line">        <span class="built_in">console</span>.log(arr.indexOf(value), index)</span><br><span class="line">        <span class="comment">// 0 0</span></span><br><span class="line">        <span class="comment">// 0 1</span></span><br><span class="line">        <span class="comment">// 2 2</span></span><br><span class="line">        <span class="comment">// 3 3</span></span><br><span class="line">        <span class="comment">// 4 4</span></span><br><span class="line">        <span class="comment">// 5 5</span></span><br><span class="line">        <span class="comment">// 2 6</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">unique([<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-<h3 id="11-jquery-里面的-document-ready-function-和-window-onload-的区别"><a href="#11-jquery-里面的-document-ready-function-和-window-onload-的区别" class="headerlink" title="11. jquery  里面的  $(document).ready(function(){})  和  window.onload  的区别"></a>11. jquery  里面的  $(document).ready(function(){})  和  window.onload  的区别</h3><ul>
+<h3 id="12-jquery-里面的-document-ready-function-和-window-onload-的区别"><a href="#12-jquery-里面的-document-ready-function-和-window-onload-的区别" class="headerlink" title="12. jquery  里面的  $(document).ready(function(){})  和  window.onload  的区别"></a>12. jquery  里面的  $(document).ready(function(){})  和  window.onload  的区别</h3><ul>
 <li><code>window.onload</code>需要等到页面中包括图片在内的元素全部加载完毕才能执行；<code>ready()</code>是DOM元素绘制结束之后就执行，不用等到加载完毕。</li>
 <li><code>window.onload</code>如果定义了多次，则只会执行一个，后者会覆盖前者； <code>ready()</code>可以同时编写多个，并且都会执行。</li>
 <li><code>window.onload</code>没有简化写法；<code>$(document).ready(function(){})</code>可以简化成<code>$(function(){})</code>。</li>
 <li>补充：<code>$(window).load(function(){})</code>和 <code>window.onload()</code>效果一致。</li>
 </ul>
-<h3 id="12-渐进增强与优雅降级"><a href="#12-渐进增强与优雅降级" class="headerlink" title="12. 渐进增强与优雅降级"></a>12. 渐进增强与优雅降级</h3><ul>
+<h3 id="13-渐进增强与优雅降级"><a href="#13-渐进增强与优雅降级" class="headerlink" title="13. 渐进增强与优雅降级"></a>13. 渐进增强与优雅降级</h3><ul>
 <li>渐进增强 一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再对高级浏览器进行效果、交互的优化，达到更好的体验。</li>
 <li>优雅降级 一开始就构建站点的完整功能，然后针对浏览器进行测试和修复。比如一开始使用<code>CSS3</code>的特性构建了一个应用，然后逐步针对各大低级浏览器进行<code>hack</code>使其可以在低版本浏览器上正常浏览。</li>
 </ul>
-<h3 id="13-cookies、localStorage和sessionStorage的区别"><a href="#13-cookies、localStorage和sessionStorage的区别" class="headerlink" title="13. cookies、localStorage和sessionStorage的区别"></a>13. cookies、localStorage和sessionStorage的区别</h3><ul>
+<h3 id="14-cookies、localStorage和sessionStorage的区别"><a href="#14-cookies、localStorage和sessionStorage的区别" class="headerlink" title="14. cookies、localStorage和sessionStorage的区别"></a>14. cookies、localStorage和sessionStorage的区别</h3><ul>
 <li>cookies存在于客户端，始终会在http请求中通过  Request Headers  Cookie头携带，即使当前请求不需要使用到cookie；大小一般在4KB，所以只适合保存很小的数据，比如会话标识；cookies在没有设置过期时间（expires）的时候，默认在关闭浏览器之后就会被清除，在有设置过期时间的时候，会一直持续到过期时间有效（即使关闭当前窗口或者关闭浏览器）。</li>
 <li>localStorage 和 sessionStorage不会发送数据到服务端，仅在本地保存；也有大小的限制，但一般在5M左右；localStorage一直有效，除非手动清除； sessionStorage只在浏览器关闭之前有效。</li>
 </ul>
@@ -319,7 +346,7 @@
 <li>利用cookie + setInterval()</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A页面</span></span><br><span class="line">$(<span class="string">'#btn'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.cookie = <span class="string">"name="</span> + <span class="string">'Jnathan'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// B页面</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getKey</span>(<span class="params">key</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="string">"&#123;\""</span>+ <span class="built_in">document</span>.cookie.replace(<span class="regexp">/;\s+/gim</span>,<span class="string">"\",\""</span>).replace(<span class="regexp">/=/gim</span>, <span class="string">"\":\""</span>) +<span class="string">"\"&#125;"</span>)[key];  </span><br><span class="line">&#125;</span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'name:'</span>, getKey(<span class="string">'name'</span>))</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="14-new-操作符的四个步骤"><a href="#14-new-操作符的四个步骤" class="headerlink" title="14. new 操作符的四个步骤"></a>14. new 操作符的四个步骤</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fn()</span><br></pre></td></tr></table></figure>
+<h3 id="15-new-操作符的四个步骤"><a href="#15-new-操作符的四个步骤" class="headerlink" title="15. new 操作符的四个步骤"></a>15. new 操作符的四个步骤</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fn()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>创建一个<code>空对象</code></li>
 </ul>
@@ -336,7 +363,7 @@
 <li>判断<code>Fn</code>的<code>返回值类型</code>。如果是<code>引用类型，则返回这个</code>引用类型的对象<code>；如果是</code>值类型<code>，则返回</code>obj`</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> result == <span class="string">'object'</span>) &#123;  <span class="comment">// 引用类型</span></span><br><span class="line">    fn = result</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">// 值类型</span></span><br><span class="line">    fn = obj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="15-构造函数实现继承的几种方式"><a href="#15-构造函数实现继承的几种方式" class="headerlink" title="15. 构造函数实现继承的几种方式"></a>15. 构造函数实现继承的几种方式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.species = <span class="string">'动物'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span> (<span class="params">name, color</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.color = color</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="16-构造函数实现继承的几种方式"><a href="#16-构造函数实现继承的几种方式" class="headerlink" title="16. 构造函数实现继承的几种方式"></a>16. 构造函数实现继承的几种方式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.species = <span class="string">'动物'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span> (<span class="params">name, color</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.color = color</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使猫继承动物：</p>
 <ul>
 <li>call apply</li>
@@ -360,7 +387,7 @@
 <li>拷贝继承</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Animal.species = <span class="string">'动物'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend2</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> C = Child.prototype</span><br><span class="line">    <span class="keyword">var</span> P = Parent.prototype</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> P) &#123;</span><br><span class="line">        C[i] = P[i]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">extend2(Cat, Animal)</span><br><span class="line"><span class="keyword">var</span> cat5 = <span class="keyword">new</span> Cat(<span class="string">'name5'</span>, <span class="string">'color5'</span>)</span><br><span class="line">alert(cat5.species) <span class="comment">// 动物</span></span><br></pre></td></tr></table></figure>
-<h3 id="16-非构造函数的继承"><a href="#16-非构造函数的继承" class="headerlink" title="16. 非构造函数的继承"></a>16. 非构造函数的继承</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Chinese = &#123;</span><br><span class="line">    nation: <span class="string">'中国'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> Doctor = &#123;</span><br><span class="line">    career: <span class="string">'医生'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="17-非构造函数的继承"><a href="#17-非构造函数的继承" class="headerlink" title="17. 非构造函数的继承"></a>17. 非构造函数的继承</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Chinese = &#123;</span><br><span class="line">    nation: <span class="string">'中国'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> Doctor = &#123;</span><br><span class="line">    career: <span class="string">'医生'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>浅拷贝</li>
 </ul>
@@ -369,40 +396,9 @@
 <li>深拷贝</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span> (<span class="params">Child, Parent</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> Child = Child || &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> Parent) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> Parent[i] == <span class="string">'object'</span>) &#123;</span><br><span class="line">            Child[i] = (Parent[i].constructor === <span class="built_in">Array</span>) ? [] : &#123;&#125;</span><br><span class="line">            deepCopy(Child[i], Parent[i])</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            Child[i] = Parent[i]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Child</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> doctor2 = deepCopy(Doctor, Chinese)</span><br><span class="line">alert(doctor.nation) <span class="comment">// 中国</span></span><br></pre></td></tr></table></figure>
-<h3 id="17-参考链接"><a href="#17-参考链接" class="headerlink" title="17. 参考链接"></a>17. <a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="noopener">参考链接</a></h3>
+<h3 id="18-参考链接"><a href="#18-参考链接" class="headerlink" title="18. 参考链接"></a>18. <a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="noopener">参考链接</a></h3>
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wxpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -432,6 +428,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/05/23/webpack-study/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          webpack-study
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/05/22/forEach-interrupt/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">forEach遍历中断</div>
@@ -453,6 +458,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-setTimeout中方法体添加引号与不添加引号的区别"><span class="toc-number">1.</span> <span class="toc-text">1. setTimeout中方法体添加引号与不添加引号的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AMD-CMD规范-common-js"><span class="toc-number">2.</span> <span class="toc-text">2. AMD/CMD规范 common.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-stopPropagation-以及-stopImmediatePropagation"><span class="toc-number">3.</span> <span class="toc-text">3. stopPropagation() 以及 stopImmediatePropagation()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-js事件中的三个阶段"><span class="toc-number">4.</span> <span class="toc-text">4. js事件中的三个阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-常见的前端性能优化手段"><span class="toc-number">5.</span> <span class="toc-text">5. 常见的前端性能优化手段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-parseInt-以及-parseFloat"><span class="toc-number">6.</span> <span class="toc-text">6. parseInt() 以及 parseFloat()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-charAt-、charCodeAt-和-fromCharCode"><span class="toc-number">7.</span> <span class="toc-text">7. charAt()、charCodeAt() 和 fromCharCode()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-原生ajax"><span class="toc-number">8.</span> <span class="toc-text">8. 原生ajax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。"><span class="toc-number">9.</span> <span class="toc-text">9. 有一个长度为n的数组，假定全部为整数，其中有且仅有一个数出现了奇数次，其他的数字都出现偶数次，找出出现了奇数次的那个数字。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-递归求1-10的和"><span class="toc-number">10.</span> <span class="toc-text">10. 递归求1-10的和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-去除数组重复元素"><span class="toc-number">11.</span> <span class="toc-text">11. 去除数组重复元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-jquery-里面的-document-ready-function-和-window-onload-的区别"><span class="toc-number">12.</span> <span class="toc-text">12. jquery  里面的  $(document).ready(function(){})  和  window.onload  的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-渐进增强与优雅降级"><span class="toc-number">13.</span> <span class="toc-text">13. 渐进增强与优雅降级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-cookies、localStorage和sessionStorage的区别"><span class="toc-number">14.</span> <span class="toc-text">14. cookies、localStorage和sessionStorage的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-new-操作符的四个步骤"><span class="toc-number">15.</span> <span class="toc-text">15. new 操作符的四个步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-构造函数实现继承的几种方式"><span class="toc-number">16.</span> <span class="toc-text">16. 构造函数实现继承的几种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-非构造函数的继承"><span class="toc-number">17.</span> <span class="toc-text">17. 非构造函数的继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-参考链接"><span class="toc-number">18.</span> <span class="toc-text">18. 参考链接</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -556,6 +574,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ellipsis</a>
               </li>
              
@@ -568,11 +594,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -35,3 +35,8 @@ blockquote {
 h4 {
     text-transform: unset!important;
 }
+
+/* 目录结构透明度 */
+.toc-container {
+    opacity: 1!important;
+}
