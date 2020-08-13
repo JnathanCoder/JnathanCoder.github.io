@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://JnathanCoder.github.io">
-  <title>== 和 === | Jnathan Blog</title>
+  <title>Tag: lazy | Jnathan Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先来几个例子，带着问题一起思考：12345678910111213console.log([10] == 10);                // trueconsole.log(&apos;10&apos; == 10);                // trueconsole.log([] == 0);                   // trueconsole.log(true == 1);">
-<meta name="keywords" content="==,===,操作符,转换">
-<meta property="og:type" content="article">
-<meta property="og:title" content="== 和 ===">
-<meta property="og:url" content="https://JnathanCoder.github.io/2020/04/29/abstract-and-strict-equality/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jnathan Blog">
+<meta property="og:url" content="https://JnathanCoder.github.io/tags/lazy/index.html">
 <meta property="og:site_name" content="Jnathan Blog">
-<meta property="og:description" content="先来几个例子，带着问题一起思考：12345678910111213console.log([10] == 10);                // trueconsole.log(&apos;10&apos; == 10);                // trueconsole.log([] == 0);                   // trueconsole.log(true == 1);">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-13T12:30:47.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="== 和 ===">
-<meta name="twitter:description" content="先来几个例子，带着问题一起思考：12345678910111213console.log([10] == 10);                // trueconsole.log(&apos;10&apos; == 10);                // trueconsole.log([] == 0);                   // trueconsole.log(true == 1);">
+<meta name="twitter:title" content="Jnathan Blog">
   
     <link rel="alternative" href="/atom.xml" title="Jnathan Blog" type="application/atom+xml">
   
@@ -145,335 +140,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-abstract-and-strict-equality" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      == 和 ===
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/08/13/image-lazyload/" class="archive-article-date">
+  	<time datetime="2020-08-13T09:37:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/08/13/image-lazyload/">Vue自定义指令 image-lazyLoad</a>
     </h1>
   
 
-        
-        <a href="/2020/04/29/abstract-and-strict-equality/" class="archive-article-date">
-  	<time datetime="2020-04-29T03:10:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先来几个例子，带着问题一起思考：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log([<span class="number">10</span>] == <span class="number">10</span>);                <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'10'</span> == <span class="number">10</span>);                <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log([] == <span class="number">0</span>);                   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span> == <span class="number">1</span>);                 <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log([] == <span class="literal">false</span>);               <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(![] == <span class="literal">false</span>);              <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log([] == ![]);                 <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span> == <span class="number">0</span>);                   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span> == <span class="literal">false</span>);               <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">false</span>);             <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">true</span>);              <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(!<span class="literal">null</span> == <span class="literal">true</span>);             <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>);         <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="1-strict-equality-comparision"><a href="#1-strict-equality-comparision" class="headerlink" title="1. === (strict equality comparision)"></a>1. === (strict equality comparision)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Type(x) !== Type(y))  <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span> (Type(x) === Type(y)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === Undefined) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (Type(x) === Null) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">String</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> 长度和对应位置上字符都相同 ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Boolean</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> xy同时为<span class="literal">true</span>或<span class="literal">false</span> ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Symbol</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> 同一个<span class="built_in">Symbol</span> ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Number</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x === <span class="literal">NaN</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">if</span> (y === <span class="literal">NaN</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">if</span> (xy相等 例如 x = <span class="number">8</span>, y = <span class="number">8</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        <span class="keyword">if</span> (x = <span class="number">0</span>, y = <span class="number">-0</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        <span class="keyword">if</span> (x = <span class="number">-0</span>, y = <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>  <span class="comment">// 其他情况均返回false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-abstract-equality-comparision"><a href="#2-abstract-equality-comparision" class="headerlink" title="2. == (abstract equality comparision)"></a>2. == (abstract equality comparision)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Type(x) === Type(y)) <span class="keyword">return</span> x === y</span><br><span class="line"><span class="keyword">if</span> (Type(x) !== Type(y)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (x === <span class="literal">null</span> &amp;&amp; y === <span class="literal">undefined</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (x === <span class="literal">undefined</span> &amp;&amp; y === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Number</span> &amp;&amp; Type(y) === <span class="built_in">String</span>) <span class="keyword">return</span> x == ToNumber(y)</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">String</span> &amp;&amp; Type(y) === <span class="built_in">Number</span>) <span class="keyword">return</span> ToNumber(x) == y</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Boolean</span>) <span class="keyword">return</span> ToNumber(x) == y</span><br><span class="line">    <span class="keyword">if</span> (Type(y) === <span class="built_in">Boolean</span>) <span class="keyword">return</span> x == ToNumber(y)</span><br><span class="line">    <span class="keyword">if</span> ([<span class="built_in">String</span>, <span class="built_in">Number</span>, <span class="built_in">Symbol</span>].includes(Type(x)) &amp;&amp; Type(y) === <span class="built_in">Object</span>) <span class="keyword">return</span> x == ToPrimitive(y)</span><br><span class="line">    <span class="keyword">if</span> (Type(x) === <span class="built_in">Object</span> &amp;&amp; [<span class="built_in">String</span>, <span class="built_in">Number</span>, <span class="built_in">Symbol</span>].includes(Type(y))) <span class="keyword">return</span> ToPrimitive(x) == y</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>  <span class="comment">// 其他情况均返回false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Type(x) 获取x的类型</li>
-<li>ToNumber(x) 将x转换成Number类型</li>
-<li>ToBoolean(x) 将x转换成Boolean类型</li>
-<li>ToString(x) 将x转换成String类型</li>
-<li>ToPrimitive(x) 将x转换成原始值</li>
-</ul>
-<h3 id="3-ToPrimitive-方法-ECMAScript规范中的抽象方法，Javascript不能访问"><a href="#3-ToPrimitive-方法-ECMAScript规范中的抽象方法，Javascript不能访问" class="headerlink" title="3. ToPrimitive()方法 - ECMAScript规范中的抽象方法，Javascript不能访问"></a>3. ToPrimitive()方法 - <small><em>ECMAScript规范中的抽象方法，Javascript不能访问</em></small></h3><p>先了解js中的原始类型：</p>
-<ul>
-<li>Null: null</li>
-<li>Undefined: undefined</li>
-<li>Number: 如 0、8、5.5、NaN、Infinite</li>
-<li>Boolean: true、false</li>
-<li>String: 如 ‘abc’、’’</li>
-<li>其余都属于’非原始类型’，如 Array、Object、Function</li>
-</ul>
-<blockquote>
-<p>typeof null 得到的结果是object, 这是js在设计之初的问题。但null是属于原始类型的（记住就行了🐶）</p>
-</blockquote>
-<blockquote>
-<p>ToPrimitive(input[, hint])转换为原始类型的方法，根据preferedType目标类型进行转换。preferedType只能是 <code>string</code> 或 <code>number</code></p>
-</blockquote>
-<p>转换步骤：</p>
-<ul>
-<li><code>hint</code> 为 <code>number</code><ul>
-<li>input是原始值，返回input本身</li>
-<li>input是对象<ul>
-<li>先判断input.valueOf()的返回值。如果是原始值，返回结果。</li>
-<li>否则，再判断input.toString()的返回值。如果是原始值，返回结果。</li>
-<li>否则，抛出不能转换成原始值的TypeError。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>hint</code> 为 <code>string</code><ul>
-<li>input是原始值，返回input本身</li>
-<li>input是对象<ul>
-<li>先判断input.toString()的返回值。如果是原始值，返回结果。</li>
-<li>否则，再判断input.valueOf()的返回值。如果是原始值，返回结果。</li>
-<li>否则，抛出不能转换成原始值的TypeError。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>hint</code> 为空<ul>
-<li><code>input</code> 是 <code>Date</code> 日期类型<ul>
-<li>input被认为是string。</li>
-<li>先判断input.toString()的返回值。如果是原始值，返回结果。</li>
-<li>否则，再判断input.valueOf()的返回值。如果是原始值，返回结果。</li>
-<li>否则，抛出不能转换成原始值的TypeError。</li>
-</ul>
-</li>
-<li><code>input</code> 是 <code>非Date</code> 类型<ul>
-<li>input被认为是number。</li>
-<li>先判断input.valueOf()的返回值。如果是原始值，返回结果。</li>
-<li>否则，再判断input.toString()的返回值。如果是原始值，返回结果。</li>
-<li>否则，抛出不能转换成原始值的TypeError。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>当调用ToPrimitive而没有传hint参数时，默认情况下hint将被赋值Number。但是可以重写对象的@@toPrimitive方法来覆盖这个行为。在本规范中，只有Date和Symbol两个对象重写了默认的ToPrimitive操作。对于Date对象，如果没有传hint，hint将被默认赋值为String</p>
-</blockquote>
-<p>示例1：ToPrimitive([10])<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有传入hint参数，并且input是Array, 所以hint被赋值为Number</span></span><br><span class="line"><span class="comment">// 先判断valueOf()</span></span><br><span class="line">[<span class="number">10</span>].valueOf() 等于 [<span class="number">10</span>]，属于 <span class="built_in">Array</span>/<span class="built_in">Object</span>，不是原始类型</span><br><span class="line"><span class="comment">// 再判断toString()</span></span><br><span class="line">[<span class="number">10</span>].toString() 等于 <span class="string">'10'</span>，属于 <span class="built_in">String</span>，是原始类型</span><br><span class="line">所以 <span class="keyword">return</span> <span class="string">'10'</span></span><br></pre></td></tr></table></figure></p>
-<p>示例2：ToPrimitive(function sayHi(){})<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sayHi = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hi, '</span> + name)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 没有传入hint参数，并且input是Function, 所以hint被赋值为Number</span></span><br><span class="line"><span class="comment">// 先判断valueOf()  typeof sayHi.valueOf === 'function'</span></span><br><span class="line">sayHi.valueOf() 等于 f (name) &#123; <span class="built_in">console</span>.log(<span class="string">'hi, '</span> + name) &#125; 属于<span class="built_in">Function</span>，不是原始类型</span><br><span class="line"><span class="comment">// 再判断toString()  typeof sayHi.toString === 'string'</span></span><br><span class="line">sayHi.toString() 等于 <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'hi, '</span> + name) &#125; 属于<span class="built_in">String</span>，是原始类型</span><br><span class="line">所以 <span class="keyword">return</span> sayHi方法的方法体源码字符串</span><br></pre></td></tr></table></figure></p>
-<p>上面示例中 [10] == 10</p>
-<ul>
-<li>Type(x) === Object, Type(y) === Number，变成比较 ToPrimitive([10]) == 10</li>
-<li>由示例1 知道 ToPrimitive([10]) === ‘10’，变成比较 ‘10’ == 10</li>
-<li>此时，Type(x) === String, Type(y) === Number，变成比较 ToNumber(‘10’) == 10</li>
-<li>ToNumber(‘10’) === 10，变成比较 10 == 10</li>
-<li>return true</li>
-</ul>
-<p>[] == 0</p>
-<ul>
-<li>Type(x) === Object, Type(y) === Number, 变成比较 ToPrimitive([]) == 0</li>
-<li>没有传入hint参数，[]不属于Date类型，hint被赋值Number</li>
-<li>Number hint先判断 valueOf()， [].valueOf()返回数组本身，不是原始类型</li>
-<li>再判断toString()，[].toString() === ‘’，属于原始类型 return ‘’</li>
-<li>等式变成 ‘’ == 0</li>
-<li>此时，Type(x) === String, Type(y) === Number, 变成比较ToNumber(‘’) == 0</li>
-<li>ToNumber(‘’) === 0, 变成比较 0 == 0</li>
-<li>return true</li>
-</ul>
-<p>按照上述步骤推导，不难可以得到： [] == false 返回true<br>那么 ![] == false 应该返回 false吧！ 在控制台验证一下 <code>![] == false</code> 返回true。纳尼！！</p>
-<ul>
-<li>![] 先转换成 Boolean。 Boolean([]) === true, ![] === false</li>
-<li>此时变成 false == false return true</li>
-</ul>
-<p>由 [] == false 返回true 和 ![] == false 返回true 得到 [] == ![] 返回 true。 🐶</p>
-<p>null == false 走的是最后一步，不满足任何条件，直接返回false，这一说法没有理解。难道不是Type(false) === Boolean然后比较 null == 0么。。。 再就是ToPrimitive(null) == 0 ?? 炸裂，我太难了。</p>
-<h3 id="4-toString-方法"><a href="#4-toString-方法" class="headerlink" title="4. toString()方法"></a>4. toString()方法</h3><blockquote>
-<p>可以将除(null和undefined)之外的数据类型转为字符串</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[].toString()  <span class="comment">// ""</span></span><br><span class="line">[<span class="number">3</span>, <span class="number">8</span>].toString()  <span class="comment">// "3, 8"</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().toString()  <span class="comment">// Fri May 01 2020 14:24:34 GMT+0800 (中国标准时间)"</span></span><br><span class="line">/abc/ig.toString()  <span class="comment">// "/abc/ig"</span></span><br><span class="line"></span><br><span class="line">(<span class="number">16</span>).toString()  <span class="comment">// '16'</span></span><br><span class="line">(<span class="number">16</span>).toString(<span class="number">2</span>)  <span class="comment">// '10000' 二进制(2-35都可)</span></span><br><span class="line">(<span class="number">16</span>).toString(<span class="number">8</span>)  <span class="comment">// '20' 八进制</span></span><br><span class="line">(<span class="number">16</span>).toString(<span class="number">16</span>)  <span class="comment">// '10' 十六进制</span></span><br><span class="line"><span class="number">0.000006</span>.toString()  <span class="comment">// '0.000006'</span></span><br><span class="line"><span class="number">0.0000006</span>.toString() <span class="comment">// '6e-7' 小数点后面6个或以上0时 小数采用e表示法输出</span></span><br><span class="line">(<span class="number">1234567890123456789012</span>).toString()  <span class="comment">// '1.2345678901234568e+21' 整数部分超过21位，采用e表示法</span></span><br></pre></td></tr></table></figure>
-<p>可以用toString()区分自定义方法和原生方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">fn.toString()  <span class="comment">// "function fn () &#123;&#125;"  -- fn 是自定义方法</span></span><br><span class="line"><span class="built_in">Number</span>.toString()  <span class="comment">// "function Number() &#123; [native code] &#125;" -- Number是一个原生方法</span></span><br></pre></td></tr></table></figure></p>
-<p>还可以用Object.prototype上的原生toString()方法判断数据类型<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">'abc'</span>);  <span class="comment">// "[object String]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">123</span>);  <span class="comment">// "[object Number]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>);  <span class="comment">// "[object Boolean]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>)  <span class="comment">// "[object Null]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>)  <span class="comment">//”[object Undefined]"</span></span><br></pre></td></tr></table></figure></p>
-<p>判断原生引用类型<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">'test'</span>)&#125;</span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(fn)  <span class="comment">// "[object Function]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 日期类型</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(date)  <span class="comment">// "[object Date]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组类型</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(arr)  <span class="comment">// "[object Array]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正则表达式</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[hbc]at/gi</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(reg)  <span class="comment">// "[object RegExp]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">"Rose"</span>)</span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(person)  <span class="comment">// "[object Object]"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="5-String-方法"><a href="#5-String-方法" class="headerlink" title="5. String()方法"></a>5. String()方法</h3><ul>
-<li>如果有toString()方法，则调用该方法，并返回结果</li>
-<li>否则：<ul>
-<li>如果是null，返回”null”</li>
-<li>如果是undefined，返回”undefined”</li>
-</ul>
-</li>
-</ul>
-<p>要区分toString()和String()</p>
-<ul>
-<li>toString(radix)支持传入radix进制参数</li>
-<li>toString不支持null和undifined调用</li>
-<li>String(null) === ‘null’</li>
-<li>String(undifined) === ‘undefined’</li>
-</ul>
-<h3 id="6-Number-方法"><a href="#6-Number-方法" class="headerlink" title="6. Number()方法"></a>6. Number()方法</h3><ul>
-<li>布尔值：true - 1 false - 0</li>
-<li>数字值：返回数字本身</li>
-<li>null：返回0</li>
-<li>undefined: 返回NaN</li>
-<li>字符串：<ul>
-<li>只包含数字：转换成十进制，忽略前导0</li>
-<li>包含有效的浮点格式：转换成浮点数职，忽略前导0</li>
-<li>空字符串：返回0</li>
-<li>其他情况：返回NaN</li>
-</ul>
-</li>
-<li>对象：调用对象的valueOf()方法，然后依据前面的规则转换返回的值。如果转换的结果是NaN，则调用对象的toString()方法，再次依照前面的规则转换返回的字符串值。</li>
-</ul>
-<h3 id="7-Boolean-方法"><a href="#7-Boolean-方法" class="headerlink" title="7. Boolean()方法"></a>7. Boolean()方法</h3><p>以下值会被转换为false：<code>false</code>、<code>&quot;&quot;</code>、<code>0</code>、<code>-0</code>、<code>NaN</code>、<code>null</code>、<code>undefined</code>，其余任何值都会被转换为<code>true</code>。<br>另外Boolean()不传递参数时，也返回false。</p>
-<h3 id="8-隐式转换"><a href="#8-隐式转换" class="headerlink" title="8. 隐式转换"></a>8. 隐式转换</h3><p>在某些情况下，即使我们不提供显示转换，Javascript也会进行自动类型转换，主要情况有：</p>
-<h4 id="8-1-用于检测是否为非数值的函数：isNaN-mix"><a href="#8-1-用于检测是否为非数值的函数：isNaN-mix" class="headerlink" title="8.1 用于检测是否为非数值的函数：isNaN(mix)"></a>8.1 用于检测是否为非数值的函数：isNaN(mix)</h4><p>isNaN()函数，会尝试将参数值用Number()进行转换，如果结果为“非数值”则返回true，否则返回false。</p>
-<h4 id="8-2-递增递减操作符（包括前置和后置）、一元正负符号操作符"><a href="#8-2-递增递减操作符（包括前置和后置）、一元正负符号操作符" class="headerlink" title="8.2 递增递减操作符（包括前置和后置）、一元正负符号操作符"></a>8.2 递增递减操作符（包括前置和后置）、一元正负符号操作符</h4><p>这些操作符适用于任何数据类型的值，针对不同类型的值，该操作符遵循以下规则（经过对比发现，其规则与Number()规则基本相同）：</p>
-<ul>
-<li>如果是包含有效数字字符的字符串，先将其转换为数字值（转换规则同Number()），在执行加减1的操作，字符串变量变为数值变量。</li>
-<li>如果是不包含有效数字字符的字符串，将变量的值设置为NaN，字符串变量变成数值变量。</li>
-<li>如果是布尔值false，先将其转换为0再执行加减1的操作，布尔值变量编程数值变量。</li>
-<li>如果是布尔值true，先将其转换为1再执行加减1的操作，布尔值变量变成数值变量。</li>
-<li>如果是浮点数值，执行加减1的操作。</li>
-<li>如果是对象，先调用对象的valueOf()方法，然后对该返回值应用前面的规则。如果结果是NaN，则调用toString()方法后再应用前面的规则。对象变量变成数值变量。</li>
-</ul>
-<h4 id="8-3-加法运算操作符"><a href="#8-3-加法运算操作符" class="headerlink" title="8.3 加法运算操作符"></a>8.3 加法运算操作符</h4><ul>
-<li>如果两个操作值都是数值，其规则为：<ul>
-<li>如果一个操作数为NaN，则结果为NaN</li>
-<li>如果是Infinity+Infinity，结果是Infinity</li>
-<li>如果是-Infinity+(-Infinity)，结果是-Infinity</li>
-<li>如果是Infinity+(-Infinity)，结果是NaN</li>
-<li>如果是+0+(+0)，结果为+0</li>
-<li>如果是(-0)+(-0)，结果为-0</li>
-<li>如果是(+0)+(-0)，结果为+0</li>
-</ul>
-</li>
-<li>如果有一个操作值为字符串，则：<ul>
-<li>如果两个操作值都是字符串，则将它们拼接起来</li>
-<li>如果只有一个操作值为字符串，则将另外操作值转换为字符串，然后拼接起来</li>
-<li>如果一个操作数是对象、数值或者布尔值，则调用toString()方法取得字符串值，然后再应用前面的字符串规则。对于undefined和null，分别调用String()显式转换为字符串。</li>
-</ul>
-</li>
-</ul>
-<p>可以看出，加法运算中，如果有一个操作值为字符串类型，则将另一个操作值转换为字符串，最后连接起来。</p>
-<h4 id="8-4-乘除、减号运算符、取模运算符"><a href="#8-4-乘除、减号运算符、取模运算符" class="headerlink" title="8.4 乘除、减号运算符、取模运算符"></a>8.4 乘除、减号运算符、取模运算符</h4><p>这些操作符针对的是运算，所以他们具有共同性：如果操作值之一不是数值，则被隐式调用Number()函数进行转换。具体每一种运算的详细规则请参考ECMAScript中的定义</p>
-<h4 id="8-5-逻辑操作符（-、-amp-amp-、-）"><a href="#8-5-逻辑操作符（-、-amp-amp-、-）" class="headerlink" title="8.5 逻辑操作符（!、&amp;&amp;、||）"></a>8.5 逻辑操作符（!、&amp;&amp;、||）</h4><p>逻辑非（！）操作符首先通过Boolean()函数将它的操作值转换为布尔值，然后求反。</p>
-<ul>
-<li>逻辑与（&amp;&amp;）操作符，如果一个操作值不是布尔值时，遵循以下规则进行转换：<ul>
-<li>如果第一个操作数经Boolean()转换后为true，则返回第二个操作值，否则返回第一个值（不是Boolean()转换后的值）</li>
-<li>如果有一个操作值为null，返回null</li>
-<li>如果有一个操作值为NaN，返回NaN</li>
-<li>如果有一个操作值为undefined，返回undefined</li>
-</ul>
-</li>
-<li>逻辑或（||）操作符，如果一个操作值不是布尔值，遵循以下规则：<ul>
-<li>如果第一个操作值经Boolean()转换后为false，则返回第二个操作值，否则返回第一个操作值（不是Boolean()转换后的值）</li>
-<li>对于undefined、null和NaN的处理规则与逻辑与（&amp;&amp;）相同</li>
-</ul>
-</li>
-</ul>
-<h4 id="8-6-关系操作符（-lt-gt-lt-gt-）"><a href="#8-6-关系操作符（-lt-gt-lt-gt-）" class="headerlink" title="8.6 关系操作符（&lt;, &gt;, &lt;=, &gt;=）"></a>8.6 关系操作符（&lt;, &gt;, &lt;=, &gt;=）</h4><ul>
-<li>如果两个操作值都是数值，则进行数值比较</li>
-<li>如果两个操作值都是字符串，则比较字符串对应的字符编码值</li>
-<li>如果只有一个操作值是数值，则将另一个操作值转换为数值，进行数值比较</li>
-<li>如果一个操作数是对象，则调用valueOf()方法（如果对象没有valueOf()方法则调用toString()方法），得到的结果按照前面的规则执行比较</li>
-<li>如果一个操作值是布尔值，则将其转换为数值，再进行比较</li>
-</ul>
-<p>注：NaN是非常特殊的值，它不和任何类型的值相等，包括它自己，同时它与任何类型的值比较大小时都返回false。</p>
-<h4 id="8-7-相等操作符"><a href="#8-7-相等操作符" class="headerlink" title="8.7 相等操作符"></a>8.7 相等操作符</h4><p>相应规则见文章最初始。</p>
-<h3 id="9-位运算符"><a href="#9-位运算符" class="headerlink" title="9. 位运算符"></a>9. 位运算符</h3><h4 id="9-1-按位与-amp"><a href="#9-1-按位与-amp" class="headerlink" title="9.1 按位与(&amp;)"></a>9.1 按位与(&amp;)</h4><h4 id="9-2-按位与"><a href="#9-2-按位与" class="headerlink" title="9.2 按位与(|)"></a>9.2 按位与(|)</h4><h4 id="9-3-按位非"><a href="#9-3-按位非" class="headerlink" title="9.3 按位非(~)"></a>9.3 按位非(~)</h4><h4 id="9-4-按位异或"><a href="#9-4-按位异或" class="headerlink" title="9.4 按位异或(^)"></a>9.4 按位异或(^)</h4><h4 id="9-5-左移-lt-lt"><a href="#9-5-左移-lt-lt" class="headerlink" title="9.5 左移(&lt;&lt;)"></a>9.5 左移(&lt;&lt;)</h4><blockquote>
-<p>该操作符会将左边操作数向左移动右边操作数的位数。向左被移出的位被丢弃，右侧用 0 补充。<br>3 &lt;&lt; 2 = 3 * 2 ^ 2 = 12</p>
-</blockquote>
-<h4 id="9-6-有符号右移-lt-lt"><a href="#9-6-有符号右移-lt-lt" class="headerlink" title="9.6 有符号右移(&lt;&lt;)"></a>9.6 有符号右移(&lt;&lt;)</h4><blockquote>
-<p>该操作符会将左边操作数向右移动右边操作数的位数。向右被移出的位被丢弃，拷贝最左侧的位以填充左侧。由于新的最左侧的位总是和以前相同，符号位没有被改变。所以被称作“符号传播”。<br>12 &gt;&gt; 2 = 12 / 2 ^ 2 = 3</p>
-</blockquote>
-<h4 id="9-6-无符号右移-lt-lt-lt"><a href="#9-6-无符号右移-lt-lt-lt" class="headerlink" title="9.6 无符号右移(&lt;&lt;&lt;)"></a>9.6 无符号右移(&lt;&lt;&lt;)</h4><blockquote>
-<p>该操作符会将左边操作数向右移动右边操作数的位数。向右被移出的位被丢弃，左侧用0填充。因为符号位变成了 0，所以结果总是非负的。（译注：即便右移 0 个比特，结果也是非负的。）</p>
-</blockquote>
-<h3 id="10-参考文章"><a href="#10-参考文章" class="headerlink" title="10. 参考文章"></a>10. 参考文章</h3><ul>
-<li><a href="https://juejin.im/entry/584918612f301e005716add6" target="_blank" rel="noopener">文章一</a></li>
-<li><a href="https://blog.csdn.net/huang100qi/article/details/80543045" target="_blank" rel="noopener">文章二</a></li>
-<li><a href="https://www.cnblogs.com/Renyi-Fan/p/9189441.html#_labelTop" target="_blank" rel="noopener">文章三</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">==</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">===</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">自定义指令</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">操作符</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转换</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">lazy</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/13/web-worker/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Web Worker 简介
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/04/19/data-type-transfer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数据类型转换</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="/assets/css/gitment.css">
-<script src="https://jjeejj.github.io/js/gitment.js"></script>
-<script>
-    var gitment = new Gitment({
-        // id: "https://JnathanCoder.github.io/2020/04/29/abstract-and-strict-equality/", // 有长度50的限制。。。
-        id: "== 和 ===",
-        owner: 'JnathanCoder',
-        repo: 'JnathanCoder.github.io',
-        oauth: {
-            client_id: '97810445ba8d89806387',
-            client_secret: '0955bdd284327730b646dcc7246b7552e909b7d4',
-        }
-    })
-    gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -496,9 +224,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
