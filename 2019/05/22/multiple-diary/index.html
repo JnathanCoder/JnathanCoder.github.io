@@ -488,16 +488,18 @@
   
   <div id="gitment-ctn"></div> 
 <link rel="stylesheet" href="/assets/css/gitment.css">
-<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<!-- <script src="https://jjeejj.github.io/js/gitment.js"></script> -->
+<script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+<!-- <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
 <script>
-    var gitment = new Gitment({
+    var gitment = new Gitmint({
         // id: "https://JnathanCoder.github.io/2019/05/22/multiple-diary/", // 有长度50的限制。。。
         id: "日志内容【一】",
         owner: 'JnathanCoder',
         repo: 'JnathanCoder.github.io',
         oauth: {
             client_id: '97810445ba8d89806387',
-            client_secret: '0955bdd284327730b646dcc7246b7552e909b7d4',
+            client_secret: 'be160a535ac2a0e0342d6fd3bcff99fce6d88d25',
         }
     })
     gitment.render('gitment-ctn')
